@@ -1,0 +1,44 @@
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews > p {
+    text-align: center;
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 2rem 0;
+}
+
+table {
+    margin: 1rem 0;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #1d1d1d;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #363636;
+}
+
+table tr:hover {
+    background-color: #555;
+}
+
+table td.center {
+    text-align: center;
+}

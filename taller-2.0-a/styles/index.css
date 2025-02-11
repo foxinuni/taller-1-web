@@ -1,0 +1,8 @@
+.about img {
+    float: left;
+    width: 30%;
+    margin: 1rem 1.2rem;
+    background-color: #2e2e2e;
+    border: 1px solid black;
+    border-radius: 5px;
+}
