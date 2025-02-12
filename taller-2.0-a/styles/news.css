@@ -1,3 +1,4 @@
+/* index Page */
 .index {
     display: flex;
     flex-direction: column;
@@ -8,6 +9,7 @@
     text-align: center;
 }
 
+/* items div */
 .index-list {
     display: flex;
     flex-direction: column;
@@ -32,6 +34,7 @@
     margin: 1rem 0;
 }
 
+/* cool arrow thinggy */
 .index-list ol > li::before {
     content: '>';
     color: rgb(255, 0, 0);
@@ -45,4 +48,67 @@
 
 .index-list a:hover {
     text-decoration: underline;
+}
+
+/* cards */
+.card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr;
+
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 8px;
+    
+    background-color: rgb(32, 32, 32);
+}
+
+.card > .display {
+    grid-column: 1 / 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card > .display > * {
+    flex: 1;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+}
+
+.card > .info {
+    grid-column: 2 / 2;
+
+    padding: 1rem 2rem;
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card > .info > h3 {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.card > .info > a {
+    margin: 20px 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+
+    color: white;
+    text-decoration: none;
+
+    background-color: rgb(255, 0, 0);
+}
+
+.card > .info > a:hover {
+    background-color: rgb(255, 0, 0, 0.8);
 }
