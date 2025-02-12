@@ -21,9 +21,8 @@ table {
 }
 
 table th, table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+    border-bottom: 1px solid #333;
+    padding: 10px;
 }
 
 table th {
@@ -41,4 +40,23 @@ table tr:hover {
 
 table td.center {
     text-align: center;
+}
+
+img.inverted {
+    filter: invert(1);
+}
+
+.purchase-button {
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darkviolet;
+    }
 }
