@@ -1,3 +1,4 @@
+/* Global Styles */
 html, body {
     margin: 0;
     padding: 0;
@@ -6,11 +7,13 @@ html, body {
     color: #fff;
 }
 
+/* Animations */
 * {
     box-sizing: border-box;
     /* border: 1px solid red; */
 }
 
+/* Header */
 header {
     background-color: #1a1a1a;
     color: #fff;
@@ -20,6 +23,7 @@ header {
     align-items: center;
 }
 
+/* Cart button */
 header .cart-button {
     background-color: rgba(226, 9, 255, 0.75);
     border-radius: 50%;
@@ -37,12 +41,14 @@ header .cart-button:hover {
     transform: scale(1.05);
 }
 
+/* Invert shopping cart icon */
 header img {
     width: 30px;
     height: 30px;
     filter: invert(1);
 }
 
+/* Cart div */
 .cart {
     display: none;
     flex-direction: column;
@@ -59,6 +65,7 @@ header img {
     border-radius: 5px;
 }
 
+/* Clear cart button */
 .cart button {
     width: 70%;
     padding: 10px;
@@ -73,6 +80,7 @@ header img {
     background-color: rgb(213, 0, 241);
 }
 
+/* Cart table */
 .cart table {
     width: 100%;
     border-collapse: collapse;
@@ -86,10 +94,12 @@ header img {
     padding: 10px;
 }
 
+/* Display cart div */
 .cart-button:hover > .cart, .cart:hover {
     display: flex;
 }
 
+/* Banner */
 .banner {
     background-size: cover;
     background-position: center;
@@ -116,6 +126,7 @@ header img {
     margin-top: 3px;
 }
 
+/* Products */
 .products {
     display: flex;
     flex-direction: column;
@@ -124,6 +135,7 @@ header img {
     padding: 10px;
 }
 
+/* Gallery / cards */
 .gallery {
     display: flex;
     flex-direction: row;
@@ -135,6 +147,7 @@ header img {
     width: 90%;
 }
 
+/* Cards */
 .product {
     border-radius: 8px;
     width: 300px;
@@ -157,6 +170,7 @@ header img {
     border-radius: 8px 8px 0px 0px;
 }
 
+/* Card info */
 .product-info {
     display: flex;
     flex-direction: column;
@@ -181,6 +195,7 @@ header img {
     margin: 0px;
 }
 
+/* Buttons */
 .product-info button, #add-product-form button {
     background-color: rgba(226, 9, 255, 0.75);
     color: #fff;
@@ -197,6 +212,7 @@ header img {
     background-color: rgb(213, 0, 241);
 }
 
+/* Form */
 .add-products {
     display: flex;
     flex-direction: column;

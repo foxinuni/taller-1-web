@@ -1,3 +1,4 @@
+/* Gallery products array */
 let products = [
     {
         name: "TridentZ RAM 16GB",
@@ -19,6 +20,7 @@ let products = [
     }
 ]
 
+/* The cart: it stores indices of the products array, and a quantity */
 let cart = [
     /*
     {
@@ -28,10 +30,12 @@ let cart = [
     */
 ];
 
+/* Update the products list in the gallery based on the current products */
 function updateProducts() {
     let productsList = document.getElementById("products-list");
     productsList.innerHTML = "";
 
+    /* For each product in the array, create a new element and add it to the gallery */
     products.forEach(product => {
         let productElement = document.createElement("div");
         productElement.innerHTML = `
@@ -49,12 +53,14 @@ function updateProducts() {
 
 }
 
+/* Update the cart list and the total based on the current cart */
 function updateCart() {
     let cartTable = document.getElementById("cart-list");
     let cartTotal = document.getElementById("cart-total");
     cartTable.innerHTML = "";
     cartTotal.innerHTML = "$0.00";
 
+    /* If the cart is empty, show a single row saying so */
     if (cart.length === 0) {
         cartTable.innerHTML = `
             <tr>
@@ -65,6 +71,7 @@ function updateCart() {
         return;
     }
 
+    /* For each item in the cart, add a row to the table */
     cart.forEach(item => {
         let product = products[item.id];
         let row = document.createElement("tr");
@@ -79,6 +86,7 @@ function updateCart() {
         cartTable.appendChild(row);
     });
 
+    /* Calculate the total value of the cart and show it in the total element */
     let total = cart.reduce((acc, item) => {
         return acc + products[item.id].value * item.quantity;
     }, 0);
@@ -86,6 +94,7 @@ function updateCart() {
     cartTotal.innerHTML = `$${total.toFixed(2)}`;
 }
 
+/* Add a product to the gallery */
 function addProduct(event) {
     let form = document.getElementById("add-product-form");
     event.preventDefault();
@@ -96,9 +105,10 @@ function addProduct(event) {
     let image = form.image.value;
 
     products.push({name, description, value, image});
-    updateProducts();
+    updateProducts(); // Update the gallery to show the new product
 }
 
+/* Add a product to the cart */
 function addToCart(id) {
     let item = cart.find(item => item.id === id);
 
@@ -108,18 +118,21 @@ function addToCart(id) {
         cart.push({id, quantity: 1});
     }
 
-    updateCart();
+    updateCart(); // Update the cart to show the new item
 }
 
+/* Remove a product from the cart */
 function clearCart() {
     cart = [];
     updateCart();
 }
 
+/* Wait for the DOM to load before running the scripts */
 document.addEventListener("DOMContentLoaded", function() {
     updateProducts();
     updateCart();
 
+    /* Add event listeners */
     document.getElementById("add-product-form").addEventListener("submit", addProduct);
     document.getElementById("clear-cart").addEventListener("click", clearCart);
 
