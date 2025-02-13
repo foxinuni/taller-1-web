@@ -1,3 +1,4 @@
+/* Reviews artile */
 .reviews {
     display: flex;
     flex-direction: column;
@@ -8,6 +9,7 @@
     text-align: center;
 }
 
+/* Table (idk why I called it a list) */
 .reviews-list {
     display: flex;
     flex-direction: column;
@@ -30,6 +32,7 @@ table th {
     font-weight: bold;
 }
 
+/* Every even row has a different color */
 table tr:nth-child(even) {
     background-color: rgb(32, 32, 32);
 }
@@ -42,10 +45,12 @@ table td.center {
     text-align: center;
 }
 
+/* Used to invert image colors (for flaticon) */
 img.inverted {
     filter: invert(1);
 }
 
+/* Purchase button */
 .purchase-button {
     background-color: rgb(255, 0, 0);
     color: white;

@@ -66,6 +66,7 @@
     background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(32, 32, 32));
 }
 
+/* image to the left of the card */
 .card > .display {
     grid-column: 1 / 1;
 
@@ -84,6 +85,7 @@
     border-radius: 8px 0 0 8px;
 }
 
+/* card's info text */
 .card > .info {
     grid-column: 2 / 2;
 
@@ -112,6 +114,7 @@
     background-color: rgb(255, 0, 0);
 }
 
+/* buttons */
 .card > .info > a:hover {
     background-color: rgb(255, 0, 0, 0.8);
 }
