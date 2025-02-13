@@ -31,11 +31,11 @@ table th {
 }
 
 table tr:nth-child(even) {
-    background-color: #363636;
+    background-color: rgb(32, 32, 32);
 }
 
 table tr:hover {
-    background-color: #555;
+    background-color: rgb(40, 40, 40);
 }
 
 table td.center {
@@ -47,16 +47,16 @@ img.inverted {
 }
 
 .purchase-button {
-    background-color: purple;
+    background-color: rgb(255, 0, 0);
     color: white;
     border: none;
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 10px 20px;
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
     &:hover {
-        background-color: darkviolet;
+        background-color: rgb(255, 0, 0, 0.8);
     }
 }

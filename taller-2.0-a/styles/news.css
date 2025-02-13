@@ -20,8 +20,10 @@
 
     margin: 2rem 0;
     padding: 1rem;
-    background-color: rgb(32, 32, 32);
     border-radius: 5px;
+
+    background-color: rgb(32, 32, 32);
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(32, 32, 32));
 }
 
 .index-list ol {
@@ -61,6 +63,7 @@
     border-radius: 8px;
     
     background-color: rgb(32, 32, 32);
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(32, 32, 32));
 }
 
 .card > .display {
